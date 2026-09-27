@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Tell Tailwind to scan this library's components when used from an app. */
+@source "../dist";
+
+@theme {
+  --font-pixel: "Press Start 2P", "VT323", ui-monospace, monospace;
+  --font-mono-retro: "VT323", ui-monospace, monospace;
+
+  --color-background: #f4f0e4;
+  --color-foreground: #1a1a1a;
+  --color-card: #fffdf5;
+  --color-card-foreground: #1a1a1a;
+  --color-popover: #fffdf5;
+  --color-popover-foreground: #1a1a1a;
+  --color-primary: #e63946;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #ffd166;
+  --color-secondary-foreground: #1a1a1a;
+  --color-accent: #06d6a0;
+  --color-accent-foreground: #1a1a1a;
+  --color-info: #118ab2;
+  --color-info-foreground: #ffffff;
+  --color-muted: #e8e2d0;
+  --color-muted-foreground: #5c5c5c;
+  --color-destructive: #d00000;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #1a1a1a;
+  --color-input: #1a1a1a;
+  --color-ring: #1a1a1a;
+
+  --shadow-pixel: 4px 4px 0 0 var(--color-border);
+  --shadow-pixel-sm: 2px 2px 0 0 var(--color-border);
+  --shadow-pixel-lg: 6px 6px 0 0 var(--color-border);
+  --radius: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-pixel;
+    image-rendering: pixelated;
+  }
+}

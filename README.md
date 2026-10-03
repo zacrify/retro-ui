@@ -65,4 +65,4 @@ To release: run `pnpm build`, bump `version` in `package.json`, commit (includin
 ## Theme
 
 Colors, fonts and pixel shadows live in `src/styles.css` under `@theme`.
-Fonts: Press Start 2P (headings, buttons) and VT323 (body text), loaded from Google Fonts.
+Font: TA Gameboy (pixel font with Thai and Latin glyphs), shipped in `src/fonts/` and loaded by `styles.css`. Note: the bundled file is the demo version of the font; check its license before production use.

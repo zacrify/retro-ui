@@ -141,7 +141,7 @@ function CardDescription({ className, ...props }) {
     "div",
     {
       "data-slot": "card-description",
-      className: cn("font-mono-retro text-lg leading-tight text-muted-foreground", className),
+      className: cn("font-mono-retro text-lg leading-normal text-muted-foreground", className),
       ...props
     }
   );
@@ -337,7 +337,7 @@ function DialogDescription({
     DialogPrimitive.Description,
     {
       "data-slot": "dialog-description",
-      className: cn("font-mono-retro text-lg leading-tight text-muted-foreground", className),
+      className: cn("font-mono-retro text-lg leading-normal text-muted-foreground", className),
       ...props
     }
   );

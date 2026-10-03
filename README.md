@@ -45,6 +45,14 @@ Badge, Button, Card, Checkbox, Dialog, Input, Label, Progress, Select, Switch, T
 
 ## Develop
 
+Quick start (clone, install, open Storybook):
+
+```bash
+git clone https://github.com/zacrify/retro-ui.git && cd retro-ui && pnpm install && pnpm storybook
+```
+
+Needs Node 20+ and pnpm (`npm i -g pnpm`). The repo is private, so ask for access first.
+
 ```bash
 pnpm install
 pnpm storybook        # http://localhost:6006

@@ -4,10 +4,16 @@ Retro 8-bit React UI components. Built on shadcn + Tailwind v4 + Radix.
 
 ## Use in an app
 
-1. Install from this folder (no npm publish needed):
+1. Install from GitHub (builds `dist/` on install via the `prepare` script):
 
 ```bash
-pnpm add "@ai-course/retro-ui@file:../shared-component" tailwindcss @tailwindcss/vite
+pnpm add "github:zacrify/retro-ui#v0.1.0" tailwindcss @tailwindcss/vite
+```
+
+Or, if the lib folder sits next to your app, install locally:
+
+```bash
+pnpm add "@ai-course/retro-ui@file:../shared-component"
 ```
 
 2. Add the Tailwind plugin to `vite.config.ts`:
@@ -46,7 +52,7 @@ pnpm build            # dist/index.js + index.d.ts
 pnpm typecheck
 ```
 
-Rebuild `dist/` after changing components. Apps that installed with `file:` pick up the new build on their next `pnpm install`.
+To release: bump `version` in `package.json`, commit, then `git tag v0.x.y && git push --tags`. Apps update with `pnpm add github:zacrify/retro-ui#v0.x.y`.
 
 ## Theme
 

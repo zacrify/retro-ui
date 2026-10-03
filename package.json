@@ -26,6 +26,7 @@
     "**/*.css"
   ],
   "scripts": {
+    "prepare": "tsup",
     "build": "tsup",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
@@ -58,5 +59,9 @@
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
     "vite": "^8.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacrify/retro-ui.git"
   }
 }

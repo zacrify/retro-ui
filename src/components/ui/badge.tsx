@@ -23,13 +23,36 @@ const badgeVariants = cva(
   }
 )
 
+export type BadgeVariant =
+  | "default"
+  | "secondary"
+  | "accent"
+  | "info"
+  | "destructive"
+  | "outline"
+
+export type BadgeProps = React.ComponentProps<"span"> &
+  Omit<VariantProps<typeof badgeVariants>, "variant"> & {
+    /**
+     * Pick by meaning, not by color:
+     * - `destructive` (dark red): unread count, positive test result, overdue
+     * - `secondary` (yellow): in-progress state, e.g. "quarantine, 3 days left"
+     * - `accent` (green): good news, e.g. "new", negative test result
+     * - `info` (blue): informational tags
+     * - `outline`: plain counts and neutral labels
+     * - `default` (red): emphasis when none of the above fits
+     */
+    variant?: BadgeVariant
+    /** Render the child element instead of a `<span>`. */
+    asChild?: boolean
+  }
+
 function Badge({
   className,
   variant = "default",
   asChild = false,
   ...props
-}: React.ComponentProps<"span"> &
-  VariantProps<typeof badgeVariants> & { asChild?: boolean }) {
+}: BadgeProps) {
   const Comp = asChild ? Slot.Root : "span"
 
   return (

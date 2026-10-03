@@ -578,7 +578,7 @@ import {
   OctagonXIcon,
   TriangleAlertIcon
 } from "lucide-react";
-import { Toaster as Sonner, toast } from "sonner";
+import { Toaster as Sonner, toast as sonnerToast } from "sonner";
 import { jsx as jsx10 } from "react/jsx-runtime";
 var Toaster = ({ ...props }) => {
   return /* @__PURE__ */ jsx10(
@@ -611,6 +611,7 @@ var Toaster = ({ ...props }) => {
     }
   );
 };
+var toast = sonnerToast;
 
 // src/components/ui/switch.tsx
 import { Switch as SwitchPrimitive } from "radix-ui";

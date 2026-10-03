@@ -6,7 +6,7 @@ import {
   OctagonXIcon,
   TriangleAlertIcon,
 } from "lucide-react"
-import { Toaster as Sonner, toast, type ToasterProps } from "sonner"
+import { Toaster as Sonner, toast as sonnerToast, type ToasterProps } from "sonner"
 
 const Toaster = ({ ...props }: ToasterProps) => {
   return (
@@ -41,5 +41,15 @@ const Toaster = ({ ...props }: ToasterProps) => {
     />
   )
 }
+
+/**
+ * Show a toast. Render `<Toaster />` once in the app first.
+ * - `toast.success("Saved")`: a save or action completed
+ * - `toast.error("Request failed")`: a request or action failed
+ * - `toast.warning("Low HP")`: something needs attention but did not fail
+ * - `toast.info("New quest")`: neutral information
+ * - `toast("Saved game")`: plain neutral notice
+ */
+const toast: typeof sonnerToast = sonnerToast
 
 export { Toaster, toast }

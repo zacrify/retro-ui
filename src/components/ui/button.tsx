@@ -35,16 +35,44 @@ const buttonVariants = cva(
   }
 )
 
+export type ButtonVariant =
+  | "default"
+  | "secondary"
+  | "accent"
+  | "info"
+  | "destructive"
+  | "outline"
+  | "ghost"
+  | "link"
+
+export type ButtonProps = React.ComponentProps<"button"> &
+  Omit<VariantProps<typeof buttonVariants>, "variant"> & {
+    /**
+     * Pick by meaning, not by color:
+     * - `default` (red): the one primary action on the screen, e.g. "Start", "Send"
+     * - `accent` (green): save / confirm / success, e.g. "Save", "Record result"
+     * - `secondary` (yellow): secondary positive action, e.g. "Load sample data"
+     * - `info` (blue): neutral helper action, e.g. "Summarize with AI"
+     * - `destructive` (dark red): delete, or an urgent/escalation action, e.g. "Delete", "Refer to hospital"
+     * - `outline`: cancel / back / toggle, sits next to a filled button
+     * - `ghost`: icon buttons and toolbars, no border
+     * - `link`: inline "see all" style navigation
+     *
+     * Rule of thumb: one `default` button per screen; everything else is `outline`
+     * unless it has a specific meaning above.
+     */
+    variant?: ButtonVariant
+    /** Render the child element instead of a `<button>` (e.g. wrap a `<a>`). */
+    asChild?: boolean
+  }
+
 function Button({
   className,
   variant = "default",
   size = "default",
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
-  }) {
+}: ButtonProps) {
   const Comp = asChild ? Slot.Root : "button"
 
   return (

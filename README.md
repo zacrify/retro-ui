@@ -97,4 +97,4 @@ To release: run `pnpm build`, bump `version` in `package.json`, commit (includin
 ## Theme
 
 Colors, fonts and pixel shadows live in `src/styles.css` under `@theme`.
-Fonts (Google Fonts): Press Start 2P for headings and buttons, VT323 for body text, Mitr for Thai glyphs. Browsers pick per glyph, so Latin uses the pixel fonts and Thai falls through to Mitr.
+Fonts: Press Start 2P for headings and buttons, VT323 for body text (both from Google Fonts), Mitr for Thai glyphs (self-hosted in `src/fonts/`, SIL OFL). Browsers pick per glyph, so Latin uses the pixel fonts and Thai falls through to Mitr. Two `@font-face` aliases (`Mitr Body`, `Mitr Pixel`) use `size-adjust` so Thai matches the visual size of each Latin font.

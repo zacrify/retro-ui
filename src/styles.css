@@ -1,14 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Mitr:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
+
+/* Mitr (SIL OFL, see src/fonts/OFL.txt) is the Thai fallback. Each alias is size-adjusted so
+   Thai glyphs match the visual size of the Latin font that comes first in the stack. */
+/* Body font fallback: shrink to match VT323 (a condensed font that renders small). */
+@font-face {
+  font-family: "Mitr Body";
+  src: url("./fonts/Mitr-Regular.woff2") format("woff2");
+  font-weight: 400;
+  size-adjust: 82%;
+  font-display: swap;
+}
+/* Pixel heading font fallback: grow to match Press Start 2P (renders large). */
+@font-face {
+  font-family: "Mitr Pixel";
+  src: url("./fonts/Mitr-Medium.woff2") format("woff2");
+  font-weight: 400;
+  size-adjust: 135%;
+  font-display: swap;
+}
 
 /* Tell Tailwind to scan this library's components when used from an app. */
 @source "../dist";
 
 @theme {
   /* Browsers pick fonts per glyph: Latin comes from the first font, Thai falls through to Mitr. */
-  --font-pixel: "Press Start 2P", "Mitr", ui-monospace, monospace;
-  --font-mono-retro: "VT323", "Mitr", ui-monospace, monospace;
+  --font-pixel: "Press Start 2P", "Mitr Pixel", ui-monospace, monospace;
+  --font-mono-retro: "VT323", "Mitr Body", ui-monospace, monospace;
 
   --color-background: #f4f0e4;
   --color-foreground: #1a1a1a;

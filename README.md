@@ -51,7 +51,7 @@ Quick start (clone, install, open Storybook):
 git clone https://github.com/zacrify/retro-ui.git && cd retro-ui && pnpm install && pnpm storybook
 ```
 
-Needs Node 20+ and pnpm (`npm i -g pnpm`). The repo is private, so ask for access first.
+Needs Node 20+ and pnpm (`npm i -g pnpm`).
 
 ```bash
 pnpm install

@@ -97,4 +97,4 @@ To release: run `pnpm build`, bump `version` in `package.json`, commit (includin
 ## Theme
 
 Colors, fonts and pixel shadows live in `src/styles.css` under `@theme`.
-Font: TA Gameboy (pixel font with Thai and Latin glyphs), shipped in `src/fonts/` and loaded by `styles.css`. Note: the bundled file is the demo version of the font; check its license before production use.
+Fonts (Google Fonts): Press Start 2P for headings and buttons, VT323 for body text, Mitr for Thai glyphs. Browsers pick per glyph, so Latin uses the pixel fonts and Thai falls through to Mitr.

@@ -1,21 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Mitr:wght@400;500&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
-
-/* TA Gameboy: pixel font with Thai + Latin glyphs, shipped with this package. */
-@font-face {
-  font-family: "TA Gameboy";
-  src: url("./fonts/TAGameboy-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* Tell Tailwind to scan this library's components when used from an app. */
 @source "../dist";
 
 @theme {
-  --font-pixel: "TA Gameboy", ui-monospace, monospace;
-  --font-mono-retro: "TA Gameboy", ui-monospace, monospace;
+  /* Browsers pick fonts per glyph: Latin comes from the first font, Thai falls through to Mitr. */
+  --font-pixel: "Press Start 2P", "Mitr", ui-monospace, monospace;
+  --font-mono-retro: "VT323", "Mitr", ui-monospace, monospace;
 
   --color-background: #f4f0e4;
   --color-foreground: #1a1a1a;

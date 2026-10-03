@@ -10,8 +10,7 @@
   },
   "files": [
     "dist",
-    "src/styles.css",
-    "src/fonts"
+    "src/styles.css"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",

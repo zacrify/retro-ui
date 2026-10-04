@@ -1,0 +1,90 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks"
+
+<Meta title="UI/Colors" />
+
+# Colors
+
+All colors live in one place: the `@theme` block in `src/styles.css`.
+Tailwind turns each `--color-*` variable into utility classes
+(`bg-primary`, `text-primary-foreground`, `border-primary`, ...).
+Components never hard-code a hex value; they pick a token by meaning.
+
+Pick a color by **what it means**, not by how it looks.
+
+## Action colors
+
+Used by `Button` and `Badge` variants.
+
+<ColorPalette>
+  <ColorItem
+    title="primary"
+    subtitle="Red. The one main action on a screen, e.g. “Start”, “Send”. Button/Badge variant: `default`."
+    colors={{ primary: "#e63946", "primary-foreground": "#ffffff" }}
+  />
+  <ColorItem
+    title="secondary"
+    subtitle="Yellow. Secondary positive action (“Load sample data”) or an in-progress state (“quarantine, 3 days left”)."
+    colors={{ secondary: "#ffd166", "secondary-foreground": "#1a1a1a" }}
+  />
+  <ColorItem
+    title="accent"
+    subtitle="Green. Save / confirm / success / good news, e.g. “Save”, “new”, negative test result."
+    colors={{ accent: "#06d6a0", "accent-foreground": "#1a1a1a" }}
+  />
+  <ColorItem
+    title="info"
+    subtitle="Blue. Neutral helper action or informational tag, e.g. “Summarize with AI”."
+    colors={{ info: "#118ab2", "info-foreground": "#ffffff" }}
+  />
+  <ColorItem
+    title="destructive"
+    subtitle="Dark red. Delete, urgent / escalation, unread count, positive test result, overdue."
+    colors={{ destructive: "#d00000", "destructive-foreground": "#ffffff" }}
+  />
+</ColorPalette>
+
+Rule of thumb: one `primary` button per screen. Everything else is `outline`
+unless it has a specific meaning above.
+
+## Surface colors
+
+<ColorPalette>
+  <ColorItem
+    title="background / foreground"
+    subtitle="Page background and default text."
+    colors={{ background: "#f4f0e4", foreground: "#1a1a1a" }}
+  />
+  <ColorItem
+    title="card / popover"
+    subtitle="Raised surfaces: Card, Dialog, Select menu, tooltips."
+    colors={{ card: "#fffdf5", "card-foreground": "#1a1a1a" }}
+  />
+  <ColorItem
+    title="muted"
+    subtitle="Disabled states, placeholder text, inactive tabs."
+    colors={{ muted: "#e8e2d0", "muted-foreground": "#5c5c5c" }}
+  />
+</ColorPalette>
+
+## Line colors
+
+<ColorPalette>
+  <ColorItem
+    title="border / input / ring"
+    subtitle="Every border, input outline and focus ring is the same near-black. This is what gives the pixel look."
+    colors={{ border: "#1a1a1a" }}
+  />
+</ColorPalette>
+
+## How to use in an app
+
+```tsx
+// Good: pick a token by meaning
+<Button variant="accent">Save</Button>
+<div className="bg-card text-card-foreground border-2 border-border">...</div>
+
+// Bad: hard-coded colors bypass the theme
+<div className="bg-[#06d6a0]">...</div>
+```
+
+To change a color everywhere, edit the variable in `src/styles.css` once.

@@ -49,7 +49,7 @@ export type ButtonProps = React.ComponentProps<"button"> &
   Omit<VariantProps<typeof buttonVariants>, "variant"> & {
     /**
      * Pick by meaning, not by color:
-     * - `default` (red): the one primary action on the screen, e.g. "Start", "Send"
+     * - `default` (indigo): the one primary action on the screen, e.g. "Start", "Send"
      * - `accent` (green): save / confirm / success, e.g. "Save", "Record result"
      * - `secondary` (yellow): secondary positive action, e.g. "Load sample data"
      * - `info` (blue): neutral helper action, e.g. "Summarize with AI"

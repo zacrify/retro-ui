@@ -40,7 +40,7 @@ export type BadgeProps = React.ComponentProps<"span"> &
      * - `accent` (green): good news, e.g. "new", negative test result
      * - `info` (blue): informational tags
      * - `outline`: plain counts and neutral labels
-     * - `default` (red): emphasis when none of the above fits
+     * - `default` (indigo): emphasis when none of the above fits
      */
     variant?: BadgeVariant
     /** Render the child element instead of a `<span>`. */

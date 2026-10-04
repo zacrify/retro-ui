@@ -35,7 +35,7 @@
   --color-card-foreground: #1a1a1a;
   --color-popover: #fffdf5;
   --color-popover-foreground: #1a1a1a;
-  --color-primary: #e63946;
+  --color-primary: #4947c7;
   --color-primary-foreground: #ffffff;
   --color-secondary: #ffd166;
   --color-secondary-foreground: #1a1a1a;
@@ -50,7 +50,6 @@
   --color-border: #1a1a1a;
   --color-input: #1a1a1a;
   --color-ring: #1a1a1a;
-
   --shadow-pixel: 4px 4px 0 0 var(--color-border);
   --shadow-pixel-sm: 2px 2px 0 0 var(--color-border);
   --shadow-pixel-lg: 6px 6px 0 0 var(--color-border);

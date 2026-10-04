@@ -51,7 +51,7 @@ Pick by meaning, not by color. Rule of thumb: one `default` button per screen; e
 
 | Variant | Color | Use for | Example label |
 |---|---|---|---|
-| `default` | red | the one primary action on the screen | "Start", "Send" |
+| `default` | indigo | the one primary action on the screen | "Start", "Send" |
 | `accent` | green | save / confirm / success | "Save", "Record result" |
 | `secondary` | yellow | secondary positive action | "Load sample data" |
 | `info` | blue | neutral helper action | "Summarize with AI" |
@@ -69,7 +69,7 @@ Pick by meaning, not by color. Rule of thumb: one `default` button per screen; e
 | `accent` | green | good news | "New", "Negative" |
 | `info` | blue | informational tags | "Imported" |
 | `outline` | white | plain counts and neutral labels | "12 items" |
-| `default` | red | emphasis when none of the above fits | "Hot" |
+| `default` | indigo | emphasis when none of the above fits | "Hot" |
 
 ### Toast
 
